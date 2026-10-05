@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลทั่วไป - กลุ่มงานบริหารทั่วไป</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Sarabun', sans-serif; background: #f5f5f5; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        header { background: linear-gradient(135deg, #8B0000, #DC143C); color: white; padding: 30px 0; }
+        header h1 { font-size: 32px; margin-bottom: 5px; }
+        header p { font-size: 18px; opacity: 0.9; }
+        
+        nav { background: #2c3e50; }
+        nav ul { list-style: none; display: flex; flex-wrap: wrap; }
+        nav a { color: white; text-decoration: none; padding: 15px 25px; display: block; transition: 0.3s; }
+        nav a:hover, nav a.active { background: #e74c3c; }
+        
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1562774053-701939374585?w=1200') center/cover;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .page-header h2 { font-size: 48px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        
+        .content-section { padding: 60px 0; }
+        .content-section h2 { font-size: 32px; color: #8B0000; margin-bottom: 30px; text-align: center; }
+        
+        .info-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .info-card h3 {
+            color: #8B0000;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #f39c12;
+        }
+        .info-card p {
+            line-height: 1.8;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .vision-mission {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .vm-card {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .vm-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .vm-card ol, .vm-card ul {
+            padding-left: 25px;
+            line-height: 1.8;
+        }
+        
+        footer { background: #2c3e50; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+        
+        @media (max-width: 768px) {
+            .vision-mission { grid-template-columns: 1fr; }
+            .page-header h2 { font-size: 32px; }
+            nav ul { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>กลุ่มงานบริหารทั่วไป</h1>
+            <p>General Management Group</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="about.html" class="active">ข้อมูลทั่วไป</a></li>
+                <li><a href="building.html">อาคารสถานที่</a></li>
+                <li><a href="download.html">ดาวน์โหลด</a></li>
+                <li><a href="structure.html">โครงสร้าง</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="page-header">
+        <h2>ข้อมูลทั่วไป</h2>
+    </section>
+    
+    <div class="container">
+        <div class="content-section">
+            <div class="info-card">
+                <h3>ข้อมูลทั่วไป กลุ่มบริหารงานทั่วไป</h3>
+                <p>การบริหารทั่วไปเป็นงานเกี่ยวกับการจัดระบบบริหารองค์กร ให้บริการบริหารงาน บริหารบุคลากรและงบประมาณอย่างทั่วถึง โดยมีบทบาทหลักในการส่งเสริมสนับสนุนและอำนวยความสะดวกต่างๆ ในการให้บริการการศึกษา มุ่งพัฒนาสถานศึกษาให้พร้อมและเกิดประโยชน์อย่างเหมาะสม ส่งเสริมให้บริการและการจัดการของสถานศึกษามีการบริหารที่มั่นคงและสอดคล้องของงานเป็นสำคัญ โดยเน้นการปรับใช้เทคโนโลยีสารสนเทศได้ ตลอดจนการมีส่วนร่วมของบุคคล ชุมชนและองค์กรที่เกี่ยวข้อง ที่ให้จัดการศึกษามีประสิทธิภาพและประสิทธิผล และมีการรายงานผลการดำเนินงานตามกระบวนการ PDCA</p>
+            </div>
+            
+            <div class="vision-mission">
+                <div class="vm-card">
+                    <h3>🎯 วิสัยทัศน์</h3>
+                    <p>กลุ่มบริหารงานทั่วไป มุ่งมั่นพัฒนาการบริหารจัดการศึกษาให้มีประสิทธิภาพ โปร่งใส และตรวจสอบได้ เพื่อสนับสนุนการจัดการศึกษาที่มีคุณภาพ</p>
+                </div>
+                
+                <div class="vm-card">
+                    <h3>📋 ภารกิจหลัก</h3>
+                    <ol>
+                        <li>เพื่อให้การบริหารสนับสนุน ส่งเสริม ประสานงานและอำนวยความสะดวก ให้การปฏิบัติงานของสถานศึกษาเป็นไปด้วยความเรียบร้อย มีประสิทธิภาพและประสิทธิผล</li>
+                        <li>เพื่อประชาสัมพันธ์ เผยแพร่ข้อมูลข่าวสารและผลงานของสถานศึกษาต่อสาธารณะชนซึ่งก่อให้เกิด ความรู้ ความเข้าใจ เจตคติที่ดี เอื้ออาทร สร้างสรรค์และให้การสนับสนุนการจัดการศึกษา</li>
+                        <li>เพื่อพัฒนาอาคาร สถานที่ แหล่งเรียนรู้ บรรยากาศและสิ่งแวดล้อมเอื้อต่อการเรียนการสอนหรือกิจกรรมของโรงเรียน</li>
+                        <li>เพื่อสร้างความสัมพันธ์ที่ดีระหว่างโรงเรียนกับชุมชน โดยการสอนให้ผู้เรียนนำความรู้ไปใช้ในชีวิตประจำวัน หรือนำไปใช้ในชีวิตจริง</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 กลุ่มงานบริหารทั่วไป โรงเรียนเวียงสระ. สงวนลิขสิทธิ์.</p>
+    </footer>
+</body>
+</html>
