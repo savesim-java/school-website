@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โครงสร้างกลุ่มบริหาร - กลุ่มงานบริหารทั่วไป</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Sarabun', sans-serif; background: #f5f5f5; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        header { background: linear-gradient(135deg, #8B0000, #DC143C); color: white; padding: 30px 0; }
+        header h1 { font-size: 32px; margin-bottom: 5px; }
+        header p { font-size: 18px; opacity: 0.9; }
+        
+        nav { background: #2c3e50; }
+        nav ul { list-style: none; display: flex; flex-wrap: wrap; }
+        nav a { color: white; text-decoration: none; padding: 15px 25px; display: block; transition: 0.3s; }
+        nav a:hover, nav a.active { background: #e74c3c; }
+        
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1562774053-701939374585?w=1200') center/cover;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .page-header h2 { font-size: 48px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        
+        .content-section { padding: 60px 0; }
+        .content-section h2 { font-size: 32px; color: #8B0000; margin-bottom: 30px; text-align: center; }
+        
+        .structure-chart {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .structure-chart img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+        .staff-section {
+            margin-top: 40px;
+        }
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .staff-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .staff-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+        .staff-photo {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 72px;
+        }
+        .staff-info {
+            padding: 20px;
+            text-align: center;
+        }
+        .staff-info h3 {
+            color: #8B0000;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .staff-info .position {
+            color: #666;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .work-units {
+            margin-top: 60px;
+        }
+        .work-units h2 {
+            font-size: 32px;
+            color: #8B0000;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .units-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .unit-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            border-top: 4px solid #e74c3c;
+        }
+        .unit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+        .unit-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .unit-card h4 {
+            color: #333;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        footer { background: #2c3e50; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+        
+        @media (max-width: 768px) {
+            .page-header h2 { font-size: 32px; }
+            nav ul { flex-direction: column; }
+            .staff-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>กลุ่มงานบริหารทั่วไป</h1>
+            <p>General Management Group</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="about.html">ข้อมูลทั่วไป</a></li>
+                <li><a href="building.html">อาคารสถานที่</a></li>
+                <li><a href="download.html">ดาวน์โหลด</a></li>
+                <li><a href="structure.html" class="active">โครงสร้าง</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="page-header">
+        <h2>โครงสร้างกลุ่มบริหารงานทั่วไป</h2>
+    </section>
+    
+    <div class="container">
+        <div class="content-section">
+            <div class="structure-chart">
+                <h2 style="color: #8B0000; margin-bottom: 20px;">📊 โครงสร้างการบริหาร</h2>
+                <p style="font-size: 16px; color: #666; margin-bottom: 20px;">แผนผังโครงสร้างกลุ่มบริหารงานทั่วไป</p>
+                <div style="background: #f9f9f9; padding: 40px; border-radius: 10px; border: 2px dashed #e74c3c;">
+                    <p style="font-size: 18px; color: #8B0000;">📌 จะใส่ภาพโครงสร้างองค์กรที่นี่</p>
+                    <p style="font-size: 14px; color: #666; margin-top: 10px;">(หลังจากนี้เราจะอัปโหลดรูปภาพโครงสร้างจริง)</p>
+                </div>
+            </div>
+            
+            <div class="staff-section">
+                <h2 style="color: #8B0000; text-align: center; margin-bottom: 30px;">👥 บุคลากรในกลุ่มบริหารงานทั่วไป</h2>
+                <div class="staff-grid">
+                    <div class="staff-card">
+                        <div class="staff-photo">👨‍</div>
+                        <div class="staff-info">
+                            <h3>นายวิสนุ ขวัญเพชร</h3>
+                            <p class="position">รองผู้อำนวยการกลุ่มบริหารงานทั่วไป</p>
+                        </div>
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-photo">👨‍💼</div>
+                        <div class="staff-info">
+                            <h3>นายสุเมธ สุวรรณสาม</h3>
+                            <p class="position">หัวหน้ากลุ่มงานบริหารทั่วไป</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="work-units">
+                <h2>🏢 ฝ่ายงานที่รับผิดชอบ</h2>
+                <div class="units-grid">
+                    <div class="unit-card">
+                        <div class="unit-icon"></div>
+                        <h4>งานบริหารงาน</h4>
+                    </div>
+                    <div class="unit-card">
+                        <div class="unit-icon">🏢</div>
+                        <h4>งานอาคารสถานที่</h4>
+                    </div>
+                    <div class="unit-card">
+                        <div class="unit-icon">🚌</div>
+                        <h4>งานยานพาหนะ</h4>
+                    </div>
+                    <div class="unit-card">
+                        <div class="unit-icon">👴</div>
+                        <h4>งานผู้ดูแลผู้สูงอายุ</h4>
+                    </div>
+                    <div class="unit-card">
+                        <div class="unit-icon">💚</div>
+                        <h4>งานส่งเสริมสุขภาพ</h4>
+                    </div>
+                    <div class="unit-card">
+                        <div class="unit-icon"></div>
+                        <h4>งานสวัสดิการสาธารณูปโภค</h4>
+                    </div>
+                    <div class="unit-card">
+                        <div class="unit-icon">📢</div>
+                        <h4>งานประชาสัมพันธ์</h4>
+                    </div>
+                    <div class="unit-card">
+                        <div class="unit-icon">💻</div>
+                        <h4>งานสารสนเทศโรงเรียน</h4>
+                    </div>
+                    <div class="unit-card">
+                        <div class="unit-icon">👥</div>
+                        <h4>งานคณะกรรมการสถานศึกษา</h4>
+                    </div>
+                    <div class="unit-card">
+                        <div class="unit-icon">🤝</div>
+                        <h4>งานสัมพันธ์ชุมชน</h4>
+                    </div>
+                    <div class="unit-card">
+                        <div class="unit-icon">📱</div>
+                        <h4>งานเทคโนโลยีเพื่อการสื่อสาร</h4>
+                    </div>
+                    <div class="unit-card">
+                        <div class="unit-icon">📁</div>
+                        <h4>งานธุรการโรงเรียน</h4>
+                    </div>
+                    <div class="unit-card">
+                        <div class="unit-icon">️</div>
+                        <h4>งานพัฒนาความปลอดภัย</h4>
+                    </div>
+                    <div class="unit-card">
+                        <div class="unit-icon">🏭</div>
+                        <h4>งานจัดการโรง</h4>
+                    </div>
+                    <div class="unit-card">
+                        <div class="unit-icon"></div>
+                        <h4>งานบ้านพักครู</h4>
+                    </div>
+                    <div class="unit-card">
+                        <div class="unit-icon">🛒</div>
+                        <h4>งานสหกรณ์โรงเรียน</h4>
+                    </div>
+                    <div class="unit-card">
+                        <div class="unit-icon">♻️</div>
+                        <h4>งาน Zero Waste</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 กลุ่มงานบริหารทั่วไป โรงเรียนเวียงสระ. สงวนลิขสิทธิ์.</p>
+    </footer>
+</body>
+</html>
